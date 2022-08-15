@@ -1,13 +1,6 @@
-# Sample Hardhat Project
+# Ethernauts
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## Solution for Ethernauts with hardhat-javascript
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-GAS_REPORT=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+This repo contains the attack contracts and attack scripts for most ethernauts challenges. Some challenges
+(ex Hello Ethernaut) doesnt make much sense to deploy in a hardhat project.
