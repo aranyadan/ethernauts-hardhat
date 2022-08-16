@@ -5,7 +5,7 @@ async function main() {
     await resetNode()
     let owner, tx, res, bal
     let [attacker] = await ethers.getSigners()
-    let instanceAddress = "0xb679fE929f642C10243516f1BF5A4050f64C7235"
+    let instanceAddress = "0xa96201E8CA6beF0A02F358470b6662BAbCE7332d"
     let target = await ethers.getContractAt("Reentrance", instanceAddress)
     let attackerContractFactory = await ethers.getContractFactory(
         "ReentranceAttacker"

