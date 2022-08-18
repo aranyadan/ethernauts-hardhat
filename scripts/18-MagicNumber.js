@@ -5,7 +5,7 @@ async function main() {
     await resetNode()
     let solver, tx, res, runcode, initcode, bytecode
     let [attacker] = await ethers.getSigners()
-    let instanceAddress = "0xcE672D9F011cdA692DedfC27563F170a12D53601"
+    let instanceAddress = "0x2Eb8b62664a667cCA66823F234e272d8746C3252"
     let target = await ethers.getContractAt("MagicNum", instanceAddress)
 
     console.log(`Attacker Address: ${attacker.address}`)
@@ -13,7 +13,7 @@ async function main() {
 
     // Attack
     runcode =
-        "6042" + // PUSH 42 (value)
+        "602A" + // PUSH 2A (value of 42 in hex)
         "6000" + // PUSH 00 (location)
         "52" + // MSTORE
         "6020" + // PUSH 20 (length)
