@@ -7,7 +7,7 @@ require("dotenv").config()
 
 // RPC URLS
 const LOCALHOST_RPC_URL = process.env.LOCALHOST_RPC_URL
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
+const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 
 // Other keys
 const PRIVATE_KEY = process.env.METAMASK_PRIVATE_KEY
@@ -30,11 +30,11 @@ module.exports = {
         hardhat: {
             chainId: 31337,
             forking: {
-                url: RINKEBY_RPC_URL,
+                url: GOERLI_RPC_URL,
             },
         },
-        rinkeby: {
-            url: RINKEBY_RPC_URL,
+        goerli: {
+            url: GOERLI_RPC_URL,
             accounts: [PRIVATE_KEY],
             chainId: 4,
             blockConfirmations: 1,
@@ -42,7 +42,7 @@ module.exports = {
     },
     etherscan: {
         apiKey: {
-            rinkeby: ETHERSCAN_API_KEY,
+            goerli: ETHERSCAN_API_KEY,
         },
     },
 }

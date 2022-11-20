@@ -2,7 +2,7 @@ const { ethers } = require("hardhat")
 const chalk = require("chalk")
 require("dotenv").config()
 
-const RINKEBY_RPC_URL = process.env.RINKEBY_RPC_URL
+const GOERLI_RPC_URL = process.env.GOERLI_RPC_URL
 const networkConfig = {
     31337: {
         name: "hardhat",
@@ -17,7 +17,7 @@ const resetNode = async () => {
             params: [
                 {
                     forking: {
-                        jsonRpcUrl: RINKEBY_RPC_URL,
+                        jsonRpcUrl: GOERLI_RPC_URL,
                     },
                 },
             ],
